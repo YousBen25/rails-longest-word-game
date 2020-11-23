@@ -20,7 +20,7 @@ class CalculateResult
     elsif !dictionnary_verif
       @result = "Sorry but #{@attempt} is not an english word"
     else
-      @result = "Its like #{@attempt} can't be built out of #{params['grid']}"
+      @result = "Its like #{@attempt} can't be built out of #{@grid}"
     end
     @result
   end
