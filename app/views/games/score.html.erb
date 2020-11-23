@@ -1,0 +1,13 @@
+
+
+<div class="result">
+  <div class="result-container">
+    <h2>Your result:</h2>
+    <p> <%= @result %> </p>
+  </div>
+  <div class="score-container">
+    <h2>Current score is </h3>
+    <p>Your score for this round is  <%= params[:attempt].size %> Points, Your total score is <%= session[:score] %></p>
+  </div>
+</div>
+<%= link_to "Play again !!", new_path  %>

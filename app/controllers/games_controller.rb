@@ -8,7 +8,11 @@ class GamesController < ApplicationController
   end
 
   def score
-    @user_attempt = params[:attempt]
-    dictionnary_verif = JSON.parse(open("https://wagon-dictionary.herokuapp.com/#{@user_attempt}").read)
+    @result = CalculateResult.new(params[:attempt], params[:grid]).call
+    if session[:score]
+      session[:score] += params[:attempt].size if @result.start_with?("Congratulation!")
+    else
+      session[:score] = params[:attempt].size if @result.start_with?("Congratulation!")
+    end
   end
 end
