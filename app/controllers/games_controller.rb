@@ -8,5 +8,7 @@ class GamesController < ApplicationController
   end
 
   def score
+    @user_attempt = params[:attempt]
+    dictionnary_verif = JSON.parse(open("https://wagon-dictionary.herokuapp.com/#{@user_attempt}").read)
   end
 end

@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+ h1 {
+  text-align: center;
+}
+
+.letter-container {
+  width: 1000px;
+  height: 150px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter {
+  width: 80px;
+  height: 80px;
+  color: black;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #008DD5;
+  color: white;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.container-game {
+  width: 1000px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}

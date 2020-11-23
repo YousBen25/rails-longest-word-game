@@ -1,0 +1,17 @@
+
+<div class="container-game">
+  <div class="letter-container">
+    <% @letters.each do |letter|%>
+      <div class="letter"> <%= letter %> </div>
+    <% end %>
+  </div>
+  <form action="/score" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon1">Try</button>
+      </div>
+      <input type="text" class="form-control" name = "attempt" placeholder="write the longest word" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    </div>
+  </form>
+</div>
